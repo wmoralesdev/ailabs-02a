@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 
 // Slide content components
+import { ThemeToggle } from "@/components/theme-toggle"
 import { QRSlide } from "@/components/slides/qr-slide"
 import { HeroSlide } from "@/components/slides/hero-slide"
 import { WelcomeVideoSlide } from "@/components/slides/welcome-video-slide"
@@ -156,7 +157,7 @@ export default function Home() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 bg-black text-white overflow-hidden"
+      className="fixed inset-0 bg-background text-foreground overflow-hidden"
     >
       {/* Slides Container */}
       <div ref={slidesRef} className="w-full h-full relative">
@@ -222,6 +223,11 @@ export default function Home() {
         <span className="text-white">{String(currentSlide + 1).padStart(2, "0")}</span>
         <span className="mx-1">/</span>
         <span>{String(TOTAL_SLIDES).padStart(2, "0")}</span>
+      </div>
+
+      {/* Theme toggle */}
+      <div className="fixed top-4 sm:top-6 right-4 sm:right-6 z-50">
+        <ThemeToggle />
       </div>
 
       {/* Keyboard hint */}

@@ -128,7 +128,7 @@ export default function Track2Page() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 bg-black text-white overflow-hidden"
+      className="fixed inset-0 bg-background text-foreground overflow-hidden"
     >
       <div ref={slidesRef} className="w-full h-full relative">
         {track2Slides.map((Slide, index) => (

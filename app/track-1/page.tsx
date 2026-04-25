@@ -151,7 +151,7 @@ export default function Track1Page() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 bg-black text-white overflow-hidden"
+      className="fixed inset-0 bg-background text-foreground overflow-hidden"
     >
       {/* Slides Container */}
       <div ref={slidesRef} className="w-full h-full relative">
