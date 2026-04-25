@@ -148,7 +148,7 @@ export default function Track3Page() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 bg-black text-white overflow-hidden"
+      className="fixed inset-0 bg-background text-foreground overflow-hidden"
     >
       <div ref={slidesRef} className="w-full h-full relative">
         <Track3TitleSlide isActive={currentSlide === 0} />
@@ -176,7 +176,7 @@ export default function Track3Page() {
         <button
           onClick={prevSlide}
           disabled={currentSlide === 0 || isAnimating}
-          className="w-8 h-8 sm:w-10 sm:h-10 border border-neutral-700 flex items-center justify-center text-neutral-400 hover:border-white hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          className="w-8 h-8 sm:w-10 sm:h-10 border border-border flex items-center justify-center text-muted-foreground hover:border-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Slide anterior"
         >
           <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -192,8 +192,8 @@ export default function Track3Page() {
               disabled={isAnimating}
               className={`transition-all ${
                 index === currentSlide
-                  ? "w-4 sm:w-6 h-1.5 bg-white"
-                  : "w-1.5 h-1.5 bg-neutral-700 hover:bg-neutral-500"
+                  ? "w-4 sm:w-6 h-1.5 bg-foreground"
+                  : "w-1.5 h-1.5 bg-border hover:bg-muted-foreground/50"
               }`}
               aria-label={`Ir a slide ${index + 1}`}
             />
@@ -203,7 +203,7 @@ export default function Track3Page() {
         <button
           onClick={nextSlide}
           disabled={currentSlide === TOTAL_SLIDES - 1 || isAnimating}
-          className="w-8 h-8 sm:w-10 sm:h-10 border border-neutral-700 flex items-center justify-center text-neutral-400 hover:border-white hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+          className="w-8 h-8 sm:w-10 sm:h-10 border border-border flex items-center justify-center text-muted-foreground hover:border-foreground hover:text-foreground transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
           aria-label="Siguiente slide"
         >
           <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -212,23 +212,23 @@ export default function Track3Page() {
         </button>
       </div>
 
-      <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 font-mono text-xs sm:text-sm text-neutral-500">
-        <span className="text-white">{String(currentSlide + 1).padStart(2, "0")}</span>
+      <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 font-mono text-xs sm:text-sm text-muted-foreground">
+        <span className="text-foreground">{String(currentSlide + 1).padStart(2, "0")}</span>
         <span className="mx-1">/</span>
         <span>{String(TOTAL_SLIDES).padStart(2, "0")}</span>
       </div>
 
-      <div className="fixed top-4 sm:top-6 left-4 sm:left-6 z-50 font-mono text-xs text-neutral-600">
+      <div className="fixed top-4 sm:top-6 left-4 sm:left-6 z-50 font-mono text-xs text-muted-foreground">
         Track 03 / ChatSDK
       </div>
 
       <TrackChromeActions />
 
-      <div className="fixed bottom-4 sm:bottom-6 left-4 sm:left-6 z-50 font-mono text-xs text-neutral-600 hidden md:flex items-center gap-2">
-        <kbd className="px-1.5 py-0.5 border border-neutral-700 text-neutral-500">
+      <div className="fixed bottom-4 sm:bottom-6 left-4 sm:left-6 z-50 font-mono text-xs text-muted-foreground hidden md:flex items-center gap-2">
+        <kbd className="px-1.5 py-0.5 border border-border text-muted-foreground">
           {"<-"}
         </kbd>
-        <kbd className="px-1.5 py-0.5 border border-neutral-700 text-neutral-500">
+        <kbd className="px-1.5 py-0.5 border border-border text-muted-foreground">
           {"->"}
         </kbd>
         <span>para navegar</span>

@@ -47,20 +47,20 @@ export function ResourcesSlide({ isActive }: SlideProps) {
 
   return (
     <section
-      className={`absolute inset-0 flex flex-col justify-center px-6 sm:px-8 md:px-16 lg:px-24 bg-neutral-950 overflow-y-auto py-16 sm:py-0 ${
+      className={`absolute inset-0 flex flex-col justify-center px-6 sm:px-8 md:px-16 lg:px-24 bg-background overflow-y-auto py-16 sm:py-0 ${
         isActive ? "pointer-events-auto" : "pointer-events-none"
       }`}
     >
       <div className="max-w-5xl mx-auto w-full">
         {/* Section label */}
         <div className="slide-animate mb-4 sm:mb-6">
-          <span className="text-neutral-600 font-mono text-xs tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground font-mono text-xs tracking-[0.2em] uppercase">
             05 / Recursos
           </span>
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-6 sm:mb-10">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-6 sm:mb-10">
           Abre estas páginas ahora
         </h2>
 
@@ -72,12 +72,12 @@ export function ResourcesSlide({ isActive }: SlideProps) {
               href={resource.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="slide-animate group p-5 sm:p-6 border border-white/30 bg-white/5 hover:bg-white/10 transition-all"
+              className="slide-animate group p-5 sm:p-6 border border-foreground/30 bg-foreground/5 hover:bg-foreground/10 transition-all"
             >
               <div className="flex items-start justify-between mb-2">
-                <h3 className="text-white font-medium text-sm sm:text-base">{resource.name}</h3>
+                <h3 className="text-foreground font-medium text-sm sm:text-base">{resource.name}</h3>
                 <svg
-                  className="w-4 h-4 text-neutral-500 group-hover:text-white transition-colors flex-shrink-0"
+                  className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -90,14 +90,14 @@ export function ResourcesSlide({ isActive }: SlideProps) {
                   />
                 </svg>
               </div>
-              <p className="text-neutral-500 text-xs sm:text-sm">{resource.description}</p>
+              <p className="text-muted-foreground text-xs sm:text-sm">{resource.description}</p>
             </a>
           ))}
         </div>
 
         {/* Secondary resources */}
         <div className="slide-animate">
-          <h3 className="text-neutral-500 text-xs font-mono uppercase tracking-wider mb-3 sm:mb-4">
+          <h3 className="text-muted-foreground text-xs font-mono uppercase tracking-wider mb-3 sm:mb-4">
             Documentación adicional
           </h3>
           <div className="flex flex-wrap gap-2 sm:gap-3">
@@ -107,7 +107,7 @@ export function ResourcesSlide({ isActive }: SlideProps) {
                 href={resource.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 border border-neutral-800 text-neutral-400 hover:border-neutral-600 hover:text-white transition-colors text-xs sm:text-sm"
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 border border-border text-muted-foreground hover:border-border hover:text-foreground transition-colors text-xs sm:text-sm"
               >
                 {resource.name}
                 <svg
@@ -129,7 +129,7 @@ export function ResourcesSlide({ isActive }: SlideProps) {
         </div>
 
         {/* Tip */}
-        <p className="slide-animate text-neutral-600 text-xs sm:text-sm mt-6 sm:mt-8">
+        <p className="slide-animate text-muted-foreground text-xs sm:text-sm mt-6 sm:mt-8">
           El hub global es donde enviarás tu build, votarás por Community Favorite y verás lo que otros están shippeando.
         </p>
       </div>

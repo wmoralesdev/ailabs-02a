@@ -1,5 +1,6 @@
 "use client"
 
+import { useTheme } from "next-themes"
 import { useEffect, useRef } from "react"
 import QRCode from "qrcode"
 
@@ -9,19 +10,19 @@ interface SlideProps {
 
 export function QRSlide({ isActive }: SlideProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const { resolvedTheme } = useTheme()
 
   useEffect(() => {
-    if (canvasRef.current) {
-      QRCode.toCanvas(canvasRef.current, "https://v0.ailabs.sv", {
-        width: 280,
-        margin: 0,
-        color: {
-          dark: "#ffffff",
-          light: "#000000",
-        },
-      })
-    }
-  }, [])
+    if (!canvasRef.current) return
+    const isDark = resolvedTheme === "dark" || resolvedTheme === undefined
+    QRCode.toCanvas(canvasRef.current, "https://02a.ailabs.sv", {
+      width: 280,
+      margin: 0,
+      color: isDark
+        ? { dark: "#ffffff", light: "#000000" }
+        : { dark: "#000000", light: "#ffffff" },
+    })
+  }, [resolvedTheme])
 
   return (
     <section
@@ -30,14 +31,12 @@ export function QRSlide({ isActive }: SlideProps) {
       }`}
     >
       <div className="slide-animate flex flex-col items-center">
-        {/* QR Code */}
-        <div className="p-4 sm:p-6 bg-black border border-neutral-800">
+        <div className="p-4 sm:p-6 bg-background border border-border">
           <canvas ref={canvasRef} className="w-[200px] h-[200px] sm:w-[280px] sm:h-[280px]" />
         </div>
 
-        {/* URL */}
-        <p className="mt-6 sm:mt-8 font-mono text-sm sm:text-base text-neutral-500">
-          v0.ailabs.sv
+        <p className="mt-6 sm:mt-8 font-mono text-sm sm:text-base text-muted-foreground">
+          02a.ailabs.sv
         </p>
       </div>
     </section>

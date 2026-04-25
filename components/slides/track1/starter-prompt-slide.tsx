@@ -38,21 +38,21 @@ export function Track1StarterPromptSlide({ isActive }: SlideProps) {
     >
       <div className="max-w-5xl mx-auto w-full">
         <div className="slide-animate mb-4 sm:mb-6">
-          <span className="text-neutral-600 font-mono text-xs tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground font-mono text-xs tracking-[0.2em] uppercase">
             11 / Prompt inicial
           </span>
         </div>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Copia esto si quieres empezar ya
         </h2>
 
-        <p className="slide-animate text-neutral-400 text-base sm:text-lg max-w-2xl mb-5 sm:mb-6 leading-relaxed">
+        <p className="slide-animate text-muted-foreground text-base sm:text-lg max-w-2xl mb-5 sm:mb-6 leading-relaxed">
           Este prompt está diseñado para una demo simple del evento. Primero hazlo funcionar con mocks; después mejoras diseño o integraciones.
         </p>
 
-        <div className="slide-animate p-4 sm:p-6 bg-neutral-900 border border-neutral-800 font-mono text-[11px] sm:text-xs md:text-sm overflow-x-auto">
-          <pre className="text-neutral-300 whitespace-pre-wrap leading-relaxed">{prompt}</pre>
+        <div className="slide-animate p-4 sm:p-6 bg-secondary border border-border font-mono text-[11px] sm:text-xs md:text-sm overflow-x-auto">
+          <pre className="text-foreground/85 whitespace-pre-wrap leading-relaxed">{prompt}</pre>
         </div>
       </div>
     </section>

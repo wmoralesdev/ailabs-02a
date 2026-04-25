@@ -58,20 +58,20 @@ export function TracksSlide({ isActive }: SlideProps) {
 
   return (
     <section
-      className={`absolute inset-0 flex flex-col justify-center px-6 sm:px-8 md:px-16 lg:px-24 bg-neutral-950 overflow-y-auto py-16 sm:py-0 ${
+      className={`absolute inset-0 flex flex-col justify-center px-6 sm:px-8 md:px-16 lg:px-24 bg-background overflow-y-auto py-16 sm:py-0 ${
         isActive ? "pointer-events-auto" : "pointer-events-none"
       }`}
     >
       <div className="max-w-5xl mx-auto w-full">
         {/* Section label */}
         <div className="slide-animate mb-4 sm:mb-6">
-          <span className="text-neutral-600 font-mono text-xs tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground font-mono text-xs tracking-[0.2em] uppercase">
             03 / Tracks del hackathon
           </span>
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-6 sm:mb-8">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-6 sm:mb-8">
           Elige tu camino
         </h2>
 
@@ -83,8 +83,8 @@ export function TracksSlide({ isActive }: SlideProps) {
               onClick={() => setActiveTrack(index)}
               className={`px-3 sm:px-4 py-2 font-mono text-xs transition-all ${
                 activeTrack === index
-                  ? "bg-white text-black"
-                  : "bg-neutral-900 text-neutral-500 hover:bg-neutral-800 hover:text-white"
+                  ? "bg-foreground text-background"
+                  : "bg-secondary text-muted-foreground hover:bg-muted hover:text-foreground"
               }`}
             >
               Track {track.id}
@@ -93,41 +93,41 @@ export function TracksSlide({ isActive }: SlideProps) {
         </div>
 
         {/* Active track content */}
-        <div className="slide-animate border border-neutral-800 bg-neutral-900/30 p-5 sm:p-8 md:p-10">
+        <div className="slide-animate border border-border bg-secondary/30 p-5 sm:p-8 md:p-10">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4 sm:mb-6">
             <div>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-1">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-light text-foreground mb-1">
                 {tracks[activeTrack].hasPixelTitle ? (
                   <>ChatSDK <span className={`${GeistPixelSquare.className} font-medium`}>Agents</span></>
                 ) : (
                   tracks[activeTrack].title
                 )}
               </h3>
-              <p className="text-neutral-500 text-sm sm:text-base">
+              <p className="text-muted-foreground text-sm sm:text-base">
                 {tracks[activeTrack].subtitle}
               </p>
             </div>
-            <span className="inline-flex items-center px-3 py-1 bg-neutral-800 text-neutral-400 text-xs font-mono self-start">
+            <span className="inline-flex items-center px-3 py-1 bg-muted text-muted-foreground text-xs font-mono self-start">
               {tracks[activeTrack].difficulty}
             </span>
           </div>
 
-          <p className="text-neutral-300 leading-relaxed mb-6 sm:mb-8 max-w-2xl text-sm sm:text-base">
+          <p className="text-foreground/85 leading-relaxed mb-6 sm:mb-8 max-w-2xl text-sm sm:text-base">
             {tracks[activeTrack].description}
           </p>
 
           {/* Quick start steps */}
           <div>
-            <h4 className="text-neutral-500 text-xs font-mono uppercase tracking-wider mb-3 sm:mb-4">
+            <h4 className="text-muted-foreground text-xs font-mono uppercase tracking-wider mb-3 sm:mb-4">
               Cómo empezar
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
               {tracks[activeTrack].steps.map((step, index) => (
                 <div key={index} className="flex flex-col gap-2">
-                  <span className="w-6 h-6 border border-neutral-700 flex items-center justify-center text-xs font-mono text-neutral-600">
+                  <span className="w-6 h-6 border border-border flex items-center justify-center text-xs font-mono text-muted-foreground">
                     {index + 1}
                   </span>
-                  <span className="text-xs sm:text-sm text-neutral-400">{step}</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">{step}</span>
                 </div>
               ))}
             </div>
@@ -135,7 +135,7 @@ export function TracksSlide({ isActive }: SlideProps) {
         </div>
 
         {/* Tip */}
-        <p className="slide-animate text-neutral-600 text-xs sm:text-sm mt-4 sm:mt-6">
+        <p className="slide-animate text-muted-foreground text-xs sm:text-sm mt-4 sm:mt-6">
           Pro tip: si quieres el camino más rápido para empezar, Track 2 es ideal. Si tu agente necesita memoria y pasos largos, Track 1.
         </p>
       </div>

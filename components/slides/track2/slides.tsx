@@ -33,17 +33,17 @@ function SlideShell({
     >
       <div className={`${maxWidth} mx-auto w-full`}>
         <div className="slide-animate mb-4 sm:mb-6">
-          <span className="text-neutral-600 font-mono text-xs tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground font-mono text-xs tracking-[0.2em] uppercase">
             {label}
           </span>
         </div>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium text-foreground mb-4 sm:mb-6">
           {title}
         </h2>
 
         {intro ? (
-          <p className="slide-animate text-neutral-400 text-base sm:text-lg max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+          <p className="slide-animate text-muted-foreground text-base sm:text-lg max-w-2xl mb-6 sm:mb-8 leading-relaxed">
             {intro}
           </p>
         ) : null}
@@ -56,7 +56,7 @@ function SlideShell({
 
 function StepNumber({ value }: { value: number }) {
   return (
-    <span className="w-6 h-6 border border-neutral-800 flex items-center justify-center text-neutral-600 font-mono text-xs flex-shrink-0 mt-0.5">
+    <span className="w-6 h-6 border border-border flex items-center justify-center text-muted-foreground font-mono text-xs flex-shrink-0 mt-0.5">
       {value}
     </span>
   )
@@ -78,26 +78,26 @@ export function Track2TitleSlide({ isActive }: SlideProps) {
     >
       <div className="max-w-4xl mx-auto w-full">
         <div className="slide-animate mb-6 sm:mb-8">
-          <span className="text-neutral-600 font-mono text-xs tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground font-mono text-xs tracking-[0.2em] uppercase">
             Track 02
           </span>
         </div>
 
-        <h1 className="slide-animate text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium text-white leading-none mb-4">
+        <h1 className="slide-animate text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium text-foreground leading-none mb-4">
           v0 + MCPs
         </h1>
         <h2
-          className={`slide-animate ${GeistPixelSquare.className} text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-neutral-500 leading-none mb-8 sm:mb-10`}
+          className={`slide-animate ${GeistPixelSquare.className} text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-muted-foreground leading-none mb-8 sm:mb-10`}
         >
           Apps conectadas
         </h2>
 
-        <p className="slide-animate text-lg sm:text-xl md:text-2xl text-neutral-400 max-w-2xl leading-relaxed mb-8 sm:mb-12">
+        <p className="slide-animate text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed mb-8 sm:mb-12">
           Construye una app con v0 que no solo responde: puede consultar herramientas, leer datos externos y mostrar un resultado útil.
         </p>
 
         <div className="slide-animate">
-          <p className="text-neutral-500 text-sm sm:text-base border-l-2 border-neutral-700 pl-4">
+          <p className="text-muted-foreground text-sm sm:text-base border-l-2 border-border pl-4">
             En palabras simples: v0 construye la app. MCP le abre puertas seguras a datos y acciones reales.
           </p>
         </div>
@@ -118,15 +118,15 @@ export function Track2ProblemSlide({ isActive }: SlideProps) {
       <div className="slide-animate space-y-3 sm:space-y-4 mb-8 sm:mb-10">
         {problemPoints.map((point, index) => (
           <div key={point} className="flex items-start gap-3 sm:gap-4">
-            <span className="w-1.5 h-1.5 bg-neutral-600 rounded-full flex-shrink-0 mt-2" />
-            <span className="text-neutral-300 text-sm sm:text-base">{point}</span>
+            <span className="w-1.5 h-1.5 bg-muted-foreground rounded-full flex-shrink-0 mt-2" />
+            <span className="text-foreground/85 text-sm sm:text-base">{point}</span>
           </div>
         ))}
       </div>
 
-      <div className="slide-animate p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
-        <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Meta del track</p>
-        <p className="text-white text-sm sm:text-base">
+      <div className="slide-animate p-4 sm:p-6 border border-border bg-secondary/50">
+        <p className="text-muted-foreground text-xs uppercase tracking-wider mb-2">Meta del track</p>
+        <p className="text-foreground text-sm sm:text-base">
           Una app deployada que use al menos una herramienta externa cotidiana vía MCP o que deje la integración lista con mock verificable.
         </p>
       </div>
@@ -151,16 +151,16 @@ export function Track2PlainMcpSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate grid grid-cols-1 md:grid-cols-4 gap-3 sm:gap-4 mb-8">
         {parts.map((part, index) => (
-          <div key={part.title} className="p-4 sm:p-5 border border-neutral-800 bg-neutral-950/50">
-            <div className="font-mono text-neutral-600 text-xs mb-4">{String(index + 1).padStart(2, "0")}</div>
-            <h3 className="text-white text-lg font-medium mb-2">{part.title}</h3>
-            <p className="text-neutral-500 text-sm leading-relaxed">{part.body}</p>
+          <div key={part.title} className="p-4 sm:p-5 border border-border bg-background/50">
+            <div className="font-mono text-muted-foreground text-xs mb-4">{String(index + 1).padStart(2, "0")}</div>
+            <h3 className="text-foreground text-lg font-medium mb-2">{part.title}</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">{part.body}</p>
           </div>
         ))}
       </div>
 
-      <div className="slide-animate p-4 sm:p-6 border-l-2 border-neutral-700 bg-neutral-900/30">
-        <p className="text-white text-sm sm:text-base">
+      <div className="slide-animate p-4 sm:p-6 border-l-2 border-border bg-secondary/30">
+        <p className="text-foreground text-sm sm:text-base">
           Si una app puede decir &quot;busqué en tus notas de Notion&quot; o &quot;preparé un borrador de follow-up&quot;, probablemente hubo una herramienta detrás.
         </p>
       </div>
@@ -189,13 +189,13 @@ export function Track2V0VsMcpSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-8">
         {columns.map((column) => (
-          <div key={column.title} className="p-5 sm:p-6 border border-neutral-800">
-            <h3 className="text-white text-xl sm:text-2xl font-medium mb-5">{column.title}</h3>
+          <div key={column.title} className="p-5 sm:p-6 border border-border">
+            <h3 className="text-foreground text-xl sm:text-2xl font-medium mb-5">{column.title}</h3>
             <div className="space-y-3">
               {column.items.map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <span className="w-1.5 h-1.5 bg-neutral-600 flex-shrink-0" />
-                  <span className="text-neutral-300 text-sm sm:text-base">{item}</span>
+                  <span className="w-1.5 h-1.5 bg-muted-foreground flex-shrink-0" />
+                  <span className="text-foreground/85 text-sm sm:text-base">{item}</span>
                 </div>
               ))}
             </div>
@@ -203,9 +203,9 @@ export function Track2V0VsMcpSlide({ isActive }: SlideProps) {
         ))}
       </div>
 
-      <div className="slide-animate p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
-        <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Frase útil para prompt</p>
-        <p className="text-white text-sm sm:text-base">
+      <div className="slide-animate p-4 sm:p-6 border border-border bg-secondary/50">
+        <p className="text-muted-foreground text-xs uppercase tracking-wider mb-2">Frase útil para prompt</p>
+        <p className="text-foreground text-sm sm:text-base">
           &quot;Primero crea el UI con datos mock. Luego agrega una capa de tools MCP con fallback mock si faltan credenciales.&quot;
         </p>
       </div>
@@ -247,18 +247,18 @@ export function Track2EverydayMcpSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate grid grid-cols-1 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
         {everydayTools.map((item, index) => (
-          <div key={item.tool} className="p-4 sm:p-5 border border-neutral-800 bg-neutral-950/50">
-            <div className="font-mono text-neutral-600 text-xs mb-3">{String(index + 1).padStart(2, "0")}</div>
-            <h3 className="text-white font-medium text-lg mb-2">{item.tool}</h3>
-            <p className="text-neutral-500 text-sm leading-relaxed">{item.use}</p>
-            <p className="text-neutral-600 text-xs mt-4">{item.source}</p>
+          <div key={item.tool} className="p-4 sm:p-5 border border-border bg-background/50">
+            <div className="font-mono text-muted-foreground text-xs mb-3">{String(index + 1).padStart(2, "0")}</div>
+            <h3 className="text-foreground font-medium text-lg mb-2">{item.tool}</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">{item.use}</p>
+            <p className="text-muted-foreground text-xs mt-4">{item.source}</p>
           </div>
         ))}
       </div>
 
-      <div className="slide-animate p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
-        <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Regla</p>
-        <p className="text-white text-sm sm:text-base">
+      <div className="slide-animate p-4 sm:p-6 border border-border bg-secondary/50">
+        <p className="text-muted-foreground text-xs uppercase tracking-wider mb-2">Regla</p>
+        <p className="text-foreground text-sm sm:text-base">
           Si requiere admin de workspace, aprobaciones largas o datos sensibles, no lo uses como primera demo.
         </p>
       </div>
@@ -284,11 +284,11 @@ export function Track2UsefulAppSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate space-y-3 sm:space-y-4">
         {actions.map((action, index) => (
-          <div key={action.verb} className="grid grid-cols-[72px_1fr] sm:grid-cols-[96px_1fr] gap-4 p-4 border border-neutral-800 bg-neutral-950/50">
-            <div className="font-mono text-neutral-600 text-xs">{String(index + 1).padStart(2, "0")}</div>
+          <div key={action.verb} className="grid grid-cols-[72px_1fr] sm:grid-cols-[96px_1fr] gap-4 p-4 border border-border bg-background/50">
+            <div className="font-mono text-muted-foreground text-xs">{String(index + 1).padStart(2, "0")}</div>
             <div>
-              <h3 className="text-white font-medium text-base sm:text-lg mb-1">{action.verb}</h3>
-              <p className="text-neutral-500 text-sm sm:text-base">{action.example}</p>
+              <h3 className="text-foreground font-medium text-base sm:text-lg mb-1">{action.verb}</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">{action.example}</p>
             </div>
           </div>
         ))}
@@ -315,25 +315,25 @@ export function Track2ArchitectureSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate grid grid-cols-1 md:grid-cols-5 gap-3 sm:gap-4 mb-8">
         {flow.map((step, index) => (
-          <div key={step} className="p-4 sm:p-5 border border-neutral-800 bg-neutral-950/50 min-h-28">
-            <div className="font-mono text-neutral-600 text-xs mb-4">{String(index + 1).padStart(2, "0")}</div>
-            <p className="text-white text-sm sm:text-base leading-relaxed">{step}</p>
+          <div key={step} className="p-4 sm:p-5 border border-border bg-background/50 min-h-28">
+            <div className="font-mono text-muted-foreground text-xs mb-4">{String(index + 1).padStart(2, "0")}</div>
+            <p className="text-foreground text-sm sm:text-base leading-relaxed">{step}</p>
           </div>
         ))}
       </div>
 
       <div className="slide-animate grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Panel 1</p>
-          <p className="text-neutral-300 text-sm">Pregunta del usuario</p>
+        <div className="p-4 border border-border">
+          <p className="text-muted-foreground text-xs uppercase tracking-wider mb-2">Panel 1</p>
+          <p className="text-foreground/85 text-sm">Pregunta del usuario</p>
         </div>
-        <div className="p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Panel 2</p>
-          <p className="text-neutral-300 text-sm">Fuente consultada</p>
+        <div className="p-4 border border-border">
+          <p className="text-muted-foreground text-xs uppercase tracking-wider mb-2">Panel 2</p>
+          <p className="text-foreground/85 text-sm">Fuente consultada</p>
         </div>
-        <div className="p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Panel 3</p>
-          <p className="text-neutral-300 text-sm">Resultado y siguiente acción</p>
+        <div className="p-4 border border-border">
+          <p className="text-muted-foreground text-xs uppercase tracking-wider mb-2">Panel 3</p>
+          <p className="text-foreground/85 text-sm">Resultado y siguiente acción</p>
         </div>
       </div>
     </SlideShell>
@@ -387,14 +387,14 @@ export function Track2RecipesSlide({ isActive }: SlideProps) {
         {recipes.map((recipe, index) => (
           <div
             key={recipe.title}
-            className={`p-5 sm:p-6 border ${index === 0 ? "border-white bg-white/5" : "border-neutral-800 bg-neutral-950/50"}`}
+            className={`p-5 sm:p-6 border ${index === 0 ? "border-foreground bg-foreground/5" : "border-border bg-background/50"}`}
           >
-            <div className="font-mono text-neutral-600 text-xs mb-3">{String(index + 1).padStart(2, "0")}</div>
-            <h3 className="text-white font-medium text-lg sm:text-xl mb-4">{recipe.title}</h3>
+            <div className="font-mono text-muted-foreground text-xs mb-3">{String(index + 1).padStart(2, "0")}</div>
+            <h3 className="text-foreground font-medium text-lg sm:text-xl mb-4">{recipe.title}</h3>
             <div className="space-y-2 text-xs sm:text-sm">
-              <p><span className="text-neutral-500">MCP:</span> <span className="text-neutral-300">{recipe.mcp}</span></p>
-              <p><span className="text-neutral-500">Input:</span> <span className="text-neutral-300">{recipe.input}</span></p>
-              <p><span className="text-neutral-500">Output:</span> <span className="text-neutral-300">{recipe.output}</span></p>
+              <p><span className="text-muted-foreground">MCP:</span> <span className="text-foreground/85">{recipe.mcp}</span></p>
+              <p><span className="text-muted-foreground">Input:</span> <span className="text-foreground/85">{recipe.input}</span></p>
+              <p><span className="text-muted-foreground">Output:</span> <span className="text-foreground/85">{recipe.output}</span></p>
             </div>
           </div>
         ))}
@@ -422,15 +422,15 @@ export function Track2PickScopeSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate space-y-3 mb-8">
         {choices.map((choice, index) => (
-          <div key={choice} className="flex items-start gap-3 p-4 border border-neutral-800 bg-neutral-950/50">
+          <div key={choice} className="flex items-start gap-3 p-4 border border-border bg-background/50">
             <StepNumber value={index + 1} />
-            <span className="text-neutral-300 text-sm sm:text-base">{choice}</span>
+            <span className="text-foreground/85 text-sm sm:text-base">{choice}</span>
           </div>
         ))}
       </div>
 
-      <div className="slide-animate p-4 sm:p-6 border-l-2 border-neutral-700 bg-neutral-900/30">
-        <p className="text-white text-sm sm:text-base">
+      <div className="slide-animate p-4 sm:p-6 border-l-2 border-border bg-secondary/30">
+        <p className="text-foreground text-sm sm:text-base">
           Buena promesa: &quot;Lee estas notas de reunión y conviértelas en decisiones, tareas y follow-up.&quot;
         </p>
       </div>
@@ -482,8 +482,8 @@ export function Track2StarterPromptSlide({ isActive }: SlideProps) {
       maxWidth="max-w-5xl"
       compact
     >
-      <div className="slide-animate p-4 sm:p-6 bg-neutral-900 border border-neutral-800 font-mono text-[11px] sm:text-xs md:text-sm overflow-x-auto">
-        <pre className="text-neutral-300 whitespace-pre-wrap leading-relaxed max-h-[52vh] overflow-y-auto pr-2">{starterPrompt}</pre>
+      <div className="slide-animate p-4 sm:p-6 bg-secondary border border-border font-mono text-[11px] sm:text-xs md:text-sm overflow-x-auto">
+        <pre className="text-foreground/85 whitespace-pre-wrap leading-relaxed max-h-[52vh] overflow-y-auto pr-2">{starterPrompt}</pre>
       </div>
     </SlideShell>
   )
@@ -508,17 +508,17 @@ export function Track2SetupMcpSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate grid grid-cols-1 md:grid-cols-5 gap-3 sm:gap-4 mb-6 sm:mb-8">
         {steps.map((step, index) => (
-          <div key={step.title} className="p-4 border border-neutral-800 bg-neutral-950/50">
-            <div className="font-mono text-neutral-600 text-xs mb-3">{String(index + 1).padStart(2, "0")}</div>
-            <h3 className="text-white font-medium text-sm sm:text-base mb-2">{step.title}</h3>
-            <p className="text-neutral-500 text-xs sm:text-sm leading-relaxed">{step.body}</p>
+          <div key={step.title} className="p-4 border border-border bg-background/50">
+            <div className="font-mono text-muted-foreground text-xs mb-3">{String(index + 1).padStart(2, "0")}</div>
+            <h3 className="text-foreground font-medium text-sm sm:text-base mb-2">{step.title}</h3>
+            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{step.body}</p>
           </div>
         ))}
       </div>
 
-      <div className="slide-animate p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
-        <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Prompt útil</p>
-        <p className="text-white text-sm sm:text-base">
+      <div className="slide-animate p-4 sm:p-6 border border-border bg-secondary/50">
+        <p className="text-muted-foreground text-xs uppercase tracking-wider mb-2">Prompt útil</p>
+        <p className="text-foreground text-sm sm:text-base">
           &quot;Agrega una integración MCP para Notion, pero si faltan credenciales mantén mock mode y muestra un mensaje claro en el UI.&quot;
         </p>
       </div>
@@ -568,8 +568,8 @@ export function Track2SupportPromptSlide({ isActive }: SlideProps) {
       maxWidth="max-w-5xl"
       compact
     >
-      <div className="slide-animate p-4 sm:p-6 bg-neutral-900 border border-neutral-800 font-mono text-[11px] sm:text-xs md:text-sm overflow-x-auto">
-        <pre className="text-neutral-300 whitespace-pre-wrap leading-relaxed max-h-[52vh] overflow-y-auto pr-2">{supportPrompt}</pre>
+      <div className="slide-animate p-4 sm:p-6 bg-secondary border border-border font-mono text-[11px] sm:text-xs md:text-sm overflow-x-auto">
+        <pre className="text-foreground/85 whitespace-pre-wrap leading-relaxed max-h-[52vh] overflow-y-auto pr-2">{supportPrompt}</pre>
       </div>
     </SlideShell>
   )
@@ -592,17 +592,17 @@ export function Track2MockFirstSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mb-8">
         {mocks.map((mock, index) => (
-          <div key={mock.item} className="p-5 border border-neutral-800 bg-neutral-950/50">
-            <div className="font-mono text-neutral-600 text-xs mb-3">{String(index + 1).padStart(2, "0")}</div>
-            <h3 className="text-white font-medium text-lg mb-2">{mock.item}</h3>
-            <p className="text-neutral-500 text-sm">{mock.detail}</p>
+          <div key={mock.item} className="p-5 border border-border bg-background/50">
+            <div className="font-mono text-muted-foreground text-xs mb-3">{String(index + 1).padStart(2, "0")}</div>
+            <h3 className="text-foreground font-medium text-lg mb-2">{mock.item}</h3>
+            <p className="text-muted-foreground text-sm">{mock.detail}</p>
           </div>
         ))}
       </div>
 
-      <div className="slide-animate p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
-        <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Regla</p>
-        <p className="text-white text-sm sm:text-base">
+      <div className="slide-animate p-4 sm:p-6 border border-border bg-secondary/50">
+        <p className="text-muted-foreground text-xs uppercase tracking-wider mb-2">Regla</p>
+        <p className="text-foreground text-sm sm:text-base">
           Si el mock no hace una demo convincente, el MCP real tampoco va a salvar la idea.
         </p>
       </div>
@@ -627,19 +627,19 @@ export function Track2ToolEvidenceSlide({ isActive }: SlideProps) {
       intro="Los asistentes deben poder señalar en pantalla: aquí la app consultó la herramienta, aquí volvió el dato y aquí la IA lo convirtió en decisión."
       maxWidth="max-w-4xl"
     >
-      <div className="slide-animate p-5 sm:p-6 border border-neutral-800 bg-neutral-950/50 mb-8">
+      <div className="slide-animate p-5 sm:p-6 border border-border bg-background/50 mb-8">
         <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
           {evidence.map((item, index) => (
-            <div key={item} className="border border-neutral-800 p-3 min-h-24">
-              <div className="font-mono text-neutral-600 text-xs mb-3">{String(index + 1).padStart(2, "0")}</div>
-              <p className="text-neutral-300 text-xs sm:text-sm leading-relaxed">{item}</p>
+            <div key={item} className="border border-border p-3 min-h-24">
+              <div className="font-mono text-muted-foreground text-xs mb-3">{String(index + 1).padStart(2, "0")}</div>
+              <p className="text-foreground/85 text-xs sm:text-sm leading-relaxed">{item}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="slide-animate p-4 sm:p-6 border-l-2 border-neutral-700 bg-neutral-900/30">
-        <p className="text-white text-sm sm:text-base">
+      <div className="slide-animate p-4 sm:p-6 border-l-2 border-border bg-secondary/30">
+        <p className="text-foreground text-sm sm:text-base">
           Tu demo debe responder: &quot;¿Qué sabe la app ahora que no sabía antes de consultar Notion, Airtable, Zapier o Asana?&quot;
         </p>
       </div>
@@ -670,7 +670,7 @@ export function Track2MvpChecklistSlide({ isActive }: SlideProps) {
         {checklist.map((item, index) => (
           <div key={item} className="flex items-start gap-3">
             <StepNumber value={index + 1} />
-            <span className="text-neutral-300 text-sm sm:text-base">{item}</span>
+            <span className="text-foreground/85 text-sm sm:text-base">{item}</span>
           </div>
         ))}
       </div>
@@ -696,9 +696,9 @@ export function Track2IterateWithV0Slide({ isActive }: SlideProps) {
     >
       <div className="slide-animate space-y-3">
         {prompts.map((prompt, index) => (
-          <div key={prompt} className="flex items-start gap-3 p-4 border border-neutral-800 bg-neutral-950/50">
+          <div key={prompt} className="flex items-start gap-3 p-4 border border-border bg-background/50">
             <StepNumber value={index + 1} />
-            <p className="text-neutral-300 text-sm sm:text-base">&quot;{prompt}&quot;</p>
+            <p className="text-foreground/85 text-sm sm:text-base">&quot;{prompt}&quot;</p>
           </div>
         ))}
       </div>
@@ -723,17 +723,17 @@ export function Track2AddMcpSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
         {sequence.map((item, index) => (
-          <div key={item.title} className="p-5 border border-neutral-800 bg-neutral-950/50">
-            <div className="font-mono text-neutral-600 text-xs mb-4">{String(index + 1).padStart(2, "0")}</div>
-            <h3 className="text-white font-medium text-lg mb-2">{item.title}</h3>
-            <p className="text-neutral-500 text-sm leading-relaxed">{item.body}</p>
+          <div key={item.title} className="p-5 border border-border bg-background/50">
+            <div className="font-mono text-muted-foreground text-xs mb-4">{String(index + 1).padStart(2, "0")}</div>
+            <h3 className="text-foreground font-medium text-lg mb-2">{item.title}</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">{item.body}</p>
           </div>
         ))}
       </div>
 
-      <div className="slide-animate p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
-        <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Prompt</p>
-        <p className="text-white text-sm sm:text-base">
+      <div className="slide-animate p-4 sm:p-6 border border-border bg-secondary/50">
+        <p className="text-muted-foreground text-xs uppercase tracking-wider mb-2">Prompt</p>
+        <p className="text-foreground text-sm sm:text-base">
           &quot;Ahora reemplaza el mock por una función server-side que use MCP. Conserva el fallback mock y muestra errores en el UI.&quot;
         </p>
       </div>
@@ -763,13 +763,13 @@ export function Track2MistakesSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         {mistakes.map((item, index) => (
-          <div key={item.mistake} className="p-4 border border-neutral-800 bg-neutral-950/50">
+          <div key={item.mistake} className="p-4 border border-border bg-background/50">
             <div className="flex items-start gap-3 mb-3">
               <StepNumber value={index + 1} />
-              <span className="text-neutral-400 text-xs sm:text-sm leading-relaxed">{item.mistake}</span>
+              <span className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{item.mistake}</span>
             </div>
             <div className="pl-9">
-              <span className="text-white text-xs sm:text-sm leading-relaxed">{item.fix}</span>
+              <span className="text-foreground text-xs sm:text-sm leading-relaxed">{item.fix}</span>
             </div>
           </div>
         ))}
@@ -796,12 +796,12 @@ export function Track2StuckSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate space-y-3">
         {recovery.map((item, index) => (
-          <div key={item.stuck} className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-3 p-4 border border-neutral-800 bg-neutral-950/50">
+          <div key={item.stuck} className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-3 p-4 border border-border bg-background/50">
             <div className="flex items-start gap-3">
               <StepNumber value={index + 1} />
-              <p className="text-neutral-500 text-sm">{item.stuck}</p>
+              <p className="text-muted-foreground text-sm">{item.stuck}</p>
             </div>
-            <p className="text-white text-sm sm:text-base md:border-l md:border-neutral-800 md:pl-4">{item.move}</p>
+            <p className="text-foreground text-sm sm:text-base md:border-l md:border-border md:pl-4">{item.move}</p>
           </div>
         ))}
       </div>
@@ -828,15 +828,15 @@ export function Track2DemoScriptSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate space-y-3 mb-8">
         {script.map((line, index) => (
-          <div key={line} className="flex items-start gap-3 p-4 border border-neutral-800 bg-neutral-950/50">
+          <div key={line} className="flex items-start gap-3 p-4 border border-border bg-background/50">
             <StepNumber value={index + 1} />
-            <span className="text-neutral-300 text-sm sm:text-base">{line}</span>
+            <span className="text-foreground/85 text-sm sm:text-base">{line}</span>
           </div>
         ))}
       </div>
 
-      <div className="slide-animate p-4 sm:p-6 border-l-2 border-neutral-700 bg-neutral-900/30">
-        <p className="text-white text-sm sm:text-base">
+      <div className="slide-animate p-4 sm:p-6 border-l-2 border-border bg-secondary/30">
+        <p className="text-foreground text-sm sm:text-base">
           No digas &quot;usa MCP&quot; primero. Di qué problema resuelve y luego muestra la conexión.
         </p>
       </div>
@@ -864,9 +864,9 @@ export function Track2SubmissionSlide({ isActive }: SlideProps) {
     >
       <div className="slide-animate grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         {submit.map((item, index) => (
-          <div key={item} className="flex items-start gap-3 p-4 border border-neutral-800 bg-neutral-950/50">
+          <div key={item} className="flex items-start gap-3 p-4 border border-border bg-background/50">
             <StepNumber value={index + 1} />
-            <span className="text-neutral-300 text-sm sm:text-base">{item}</span>
+            <span className="text-foreground/85 text-sm sm:text-base">{item}</span>
           </div>
         ))}
       </div>
@@ -893,13 +893,13 @@ export function Track2RecapSlide({ isActive }: SlideProps) {
       <div className="slide-animate space-y-4 mb-8">
         {recap.map((item, index) => (
           <div key={item} className="flex items-start gap-4">
-            <span className="text-neutral-600 font-mono text-sm">{String(index + 1).padStart(2, "0")}</span>
-            <span className="text-neutral-300 text-base sm:text-lg">{item}</span>
+            <span className="text-muted-foreground font-mono text-sm">{String(index + 1).padStart(2, "0")}</span>
+            <span className="text-foreground/85 text-base sm:text-lg">{item}</span>
           </div>
         ))}
       </div>
 
-      <div className="slide-animate p-5 sm:p-6 border border-white bg-white text-black">
+      <div className="slide-animate p-5 sm:p-6 border border-foreground bg-foreground text-background">
         <p className="font-medium text-sm sm:text-base">
           Abre v0.app, pega el starter prompt, y mantén la primera versión pequeña hasta que puedas explicarla en una sola frase.
         </p>

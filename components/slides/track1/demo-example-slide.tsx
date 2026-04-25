@@ -37,29 +37,29 @@ export function Track1DemoExampleSlide({ isActive }: SlideProps) {
       <div className="max-w-5xl mx-auto w-full">
         {/* Section label */}
         <div className="slide-animate mb-4 sm:mb-6">
-          <span className="text-neutral-600 font-mono text-xs tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground font-mono text-xs tracking-[0.2em] uppercase">
             13 / Ejemplo de Brief
           </span>
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Ejemplo completo: testimonio con aprobación
         </h2>
 
-        <p className="slide-animate text-neutral-400 text-base sm:text-lg max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+        <p className="slide-animate text-muted-foreground text-base sm:text-lg max-w-2xl mb-6 sm:mb-8 leading-relaxed">
           Este ejemplo funciona porque tiene input claro, pasos visibles, pausa humana y output final concreto.
         </p>
 
         <div className="slide-animate grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
           {/* Workflow steps */}
-          <div className="lg:col-span-2 p-4 sm:p-6 border border-neutral-800">
-            <p className="text-neutral-500 text-xs uppercase tracking-wider mb-3">Workflow</p>
+          <div className="lg:col-span-2 p-4 sm:p-6 border border-border">
+            <p className="text-muted-foreground text-xs uppercase tracking-wider mb-3">Workflow</p>
             <div className="space-y-2">
               {workflowSteps.map((step, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <span className="text-neutral-600 font-mono text-xs mt-0.5">{index + 1}.</span>
-                  <span className="text-neutral-300 text-sm">{step}</span>
+                  <span className="text-muted-foreground font-mono text-xs mt-0.5">{index + 1}.</span>
+                  <span className="text-foreground/85 text-sm">{step}</span>
                 </div>
               ))}
             </div>
@@ -67,24 +67,24 @@ export function Track1DemoExampleSlide({ isActive }: SlideProps) {
 
           {/* UI and Why */}
           <div className="space-y-4 sm:space-y-6">
-            <div className="p-4 border border-neutral-800">
-              <p className="text-neutral-500 text-xs uppercase tracking-wider mb-3">UI</p>
+            <div className="p-4 border border-border">
+              <p className="text-muted-foreground text-xs uppercase tracking-wider mb-3">UI</p>
               <div className="flex flex-wrap gap-1.5">
                 {uiElements.map((el, index) => (
-                  <span key={index} className="px-2 py-1 bg-neutral-900 text-neutral-400 text-xs">
+                  <span key={index} className="px-2 py-1 bg-secondary text-muted-foreground text-xs">
                     {el}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="p-4 border border-neutral-800">
-              <p className="text-neutral-500 text-xs uppercase tracking-wider mb-3">Por qué funciona para WDK</p>
+            <div className="p-4 border border-border">
+              <p className="text-muted-foreground text-xs uppercase tracking-wider mb-3">Por qué funciona para WDK</p>
               <div className="space-y-1.5">
                 {whyItFits.map((reason, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <span className="w-1 h-1 bg-white rounded-full" />
-                    <span className="text-neutral-400 text-xs">{reason}</span>
+                    <span className="w-1 h-1 bg-foreground rounded-full" />
+                    <span className="text-muted-foreground text-xs">{reason}</span>
                   </div>
                 ))}
               </div>
@@ -93,9 +93,9 @@ export function Track1DemoExampleSlide({ isActive }: SlideProps) {
         </div>
 
         {/* Builder action */}
-        <div className="slide-animate p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
-          <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Acción</p>
-          <p className="text-white text-sm sm:text-base">
+        <div className="slide-animate p-4 sm:p-6 border border-border bg-secondary/50">
+          <p className="text-muted-foreground text-xs uppercase tracking-wider mb-2">Acción</p>
+          <p className="text-foreground text-sm sm:text-base">
             Copia esta estructura y cambia el dominio, input, regla de revisión y output final por los tuyos.
           </p>
         </div>

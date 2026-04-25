@@ -21,40 +21,40 @@ export function Track1MistakesSlide({ isActive }: SlideProps) {
       <div className="max-w-5xl mx-auto w-full">
         {/* Section label */}
         <div className="slide-animate mb-3 sm:mb-4">
-          <span className="text-neutral-600 font-mono text-xs tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground font-mono text-xs tracking-[0.2em] uppercase">
             17 / Errores comunes
           </span>
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-3 sm:mb-4">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-3 sm:mb-4">
           Evita sobreconstruir
         </h2>
 
-        <p className="slide-animate text-neutral-400 text-sm sm:text-base max-w-2xl mb-5 sm:mb-6 leading-relaxed">
+        <p className="slide-animate text-muted-foreground text-sm sm:text-base max-w-2xl mb-5 sm:mb-6 leading-relaxed">
           La mayoría de proyectos débiles fallan porque el workflow es muy amplio, muy escondido o muy difícil de verificar.
         </p>
 
         {/* Mistakes list */}
         <div className="slide-animate grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-5 sm:mb-6">
           {mistakes.map((item, index) => (
-            <div key={index} className="p-4 border border-neutral-800 bg-neutral-950/50">
+            <div key={index} className="p-4 border border-border bg-background/50">
               <div className="flex items-start gap-3 mb-3">
-                <span className="w-6 h-6 border border-neutral-800 flex items-center justify-center text-neutral-600 font-mono text-xs flex-shrink-0">
+                <span className="w-6 h-6 border border-border flex items-center justify-center text-muted-foreground font-mono text-xs flex-shrink-0">
                   {index + 1}
                 </span>
-                <span className="text-neutral-400 text-xs sm:text-sm leading-relaxed">{item.mistake}</span>
+                <span className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{item.mistake}</span>
               </div>
               <div className="pl-9">
-                <span className="text-white text-xs sm:text-sm leading-relaxed">{item.fix}</span>
+                <span className="text-foreground text-xs sm:text-sm leading-relaxed">{item.fix}</span>
               </div>
             </div>
           ))}
         </div>
 
         {/* Builder action */}
-        <div className="slide-animate p-4 border-l-2 border-neutral-700 bg-neutral-900/30">
-          <p className="text-white text-sm">
+        <div className="slide-animate p-4 border-l-2 border-border bg-secondary/30">
+          <p className="text-foreground text-sm">
             Si tu proyecto tiene más de siete pasos, recórtalo para la versión del evento.
           </p>
         </div>

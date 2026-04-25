@@ -47,17 +47,17 @@ export function DeckSelectorSlide({ isActive }: SlideProps) {
       <div className="max-w-5xl mx-auto w-full">
         {/* Section label */}
         <div className="slide-animate mb-4 sm:mb-6 text-center">
-          <span className="text-neutral-600 font-mono text-xs tracking-[0.2em] uppercase">
+          <span className="text-muted-foreground font-mono text-xs tracking-[0.2em] uppercase">
             Tracks
           </span>
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6 text-center">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6 text-center">
           Elige tu track
         </h2>
 
-        <p className="slide-animate text-neutral-400 text-base sm:text-lg max-w-xl mx-auto mb-10 sm:mb-14 leading-relaxed text-center">
+        <p className="slide-animate text-muted-foreground text-base sm:text-lg max-w-xl mx-auto mb-10 sm:mb-14 leading-relaxed text-center">
           Cada track tiene contenido especializado para que puedas construir sin empezar desde cero.
         </p>
 
@@ -68,14 +68,14 @@ export function DeckSelectorSlide({ isActive }: SlideProps) {
               {deck.available ? (
                 <Link
                   href={deck.href}
-                  className="block p-6 sm:p-8 border border-neutral-800 hover:border-white transition-all group"
+                  className="block p-6 sm:p-8 border border-border hover:border-foreground transition-all group"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <span className="text-neutral-600 font-mono text-xs tracking-wider">
+                    <span className="text-muted-foreground font-mono text-xs tracking-wider">
                       {deck.number}
                     </span>
                     <svg 
-                      className="w-4 h-4 text-neutral-600 group-hover:text-white transition-colors" 
+                      className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" 
                       fill="none" 
                       stroke="currentColor" 
                       viewBox="0 0 24 24"
@@ -83,33 +83,33 @@ export function DeckSelectorSlide({ isActive }: SlideProps) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-medium text-white mb-1 group-hover:text-white transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-medium text-foreground mb-1 group-hover:text-foreground transition-colors">
                     {deck.title}
                   </h3>
-                  <p className={`${GeistPixelSquare.className} text-lg sm:text-xl text-neutral-400 group-hover:text-white transition-colors mb-3`}>
+                  <p className={`${GeistPixelSquare.className} text-lg sm:text-xl text-muted-foreground group-hover:text-foreground transition-colors mb-3`}>
                     {deck.subtitle}
                   </p>
-                  <p className="text-neutral-500 text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {deck.description}
                   </p>
                 </Link>
               ) : (
-                <div className="p-6 sm:p-8 border border-neutral-900 opacity-50 cursor-not-allowed">
+                <div className="p-6 sm:p-8 border border-border opacity-50 cursor-not-allowed">
                   <div className="flex items-start justify-between mb-4">
-                    <span className="text-neutral-700 font-mono text-xs tracking-wider">
+                    <span className="text-muted-foreground font-mono text-xs tracking-wider">
                       {deck.number}
                     </span>
-                    <span className="text-neutral-700 font-mono text-xs">
+                    <span className="text-muted-foreground font-mono text-xs">
                       Proximamente
                     </span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-medium text-neutral-600 mb-1">
+                  <h3 className="text-xl sm:text-2xl font-medium text-muted-foreground mb-1">
                     {deck.title}
                   </h3>
-                  <p className={`${GeistPixelSquare.className} text-lg sm:text-xl text-neutral-700 mb-3`}>
+                  <p className={`${GeistPixelSquare.className} text-lg sm:text-xl text-muted-foreground mb-3`}>
                     {deck.subtitle}
                   </p>
-                  <p className="text-neutral-700 text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {deck.description}
                   </p>
                 </div>
@@ -120,7 +120,7 @@ export function DeckSelectorSlide({ isActive }: SlideProps) {
 
         {/* Footer note */}
         <div className="slide-animate mt-10 sm:mt-14 text-center">
-          <p className="text-neutral-600 text-xs sm:text-sm">
+          <p className="text-muted-foreground text-xs sm:text-sm">
             Navega hacia atras para ver el deck principal
           </p>
         </div>
