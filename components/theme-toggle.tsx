@@ -18,7 +18,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="border border-neutral-800 bg-background/70 px-3 py-2 text-muted-foreground backdrop-blur transition-colors hover:border-foreground hover:text-foreground font-mono text-[10px] sm:text-xs uppercase tracking-[0.14em] flex items-center gap-1.5"
+      className="border border-foreground bg-background/70 px-3 py-2 text-foreground backdrop-blur transition-colors hover:opacity-70 font-mono text-[10px] sm:text-xs uppercase tracking-[0.14em] flex items-center gap-1.5"
       aria-label={isDark ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
     >
       {isDark ? (

@@ -9,7 +9,7 @@ export function TrackChromeActions() {
       <ThemeToggle />
       <Link
         href="/?slide=tracks"
-        className="border border-neutral-800 bg-background/70 px-3 py-2 text-muted-foreground backdrop-blur transition-colors hover:border-foreground hover:text-foreground"
+        className="border border-foreground bg-background/70 px-3 py-2 text-foreground backdrop-blur transition-colors hover:opacity-70"
       >
         Tracks
       </Link>
@@ -17,7 +17,7 @@ export function TrackChromeActions() {
         href="https://ailabs.sv/links"
         target="_blank"
         rel="noreferrer"
-        className="border border-neutral-800 bg-background/70 px-3 py-2 text-muted-foreground backdrop-blur transition-colors hover:border-foreground hover:text-foreground"
+        className="border border-foreground bg-background/70 px-3 py-2 text-foreground backdrop-blur transition-colors hover:opacity-70"
       >
         Links
       </a>
