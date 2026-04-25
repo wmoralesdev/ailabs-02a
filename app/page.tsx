@@ -1,6 +1,7 @@
 "use client"
 
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useRouter, useSearchParams } from "next/navigation"
+import { Suspense, useCallback, useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 
 // Slide content components
@@ -20,17 +21,22 @@ import { TrackChromeActions } from "@/components/slides/track-chrome-actions"
 const TOTAL_SLIDES = 11
 const INITIAL_SLIDE = 1 // Start at hero slide, but allow navigating back to QR
 const TRACK_SELECTOR_SLIDE = TOTAL_SLIDES - 1
+/** 0-based; “slide 2” of the main deck = hero */
+const HERO_SLIDE_INDEX = 1
 
 function getInitialSlide() {
   if (typeof window === "undefined") return INITIAL_SLIDE
 
   const params = new URLSearchParams(window.location.search)
   if (params.get("slide") === "tracks") return TRACK_SELECTOR_SLIDE
+  if (params.get("slide") === "hero") return HERO_SLIDE_INDEX
 
   return INITIAL_SLIDE
 }
 
-export default function Home() {
+function HomeDeck() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
   const [currentSlide, setCurrentSlide] = useState(INITIAL_SLIDE)
   const [isAnimating, setIsAnimating] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -121,6 +127,8 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handleKeyDown)
   }, [nextSlide, prevSlide])
 
+  const skipQueryDeepLink = useRef(true)
+
   // Initial layout and animation
   useEffect(() => {
     const initialSlideIndex = getInitialSlide()
@@ -153,6 +161,22 @@ export default function Home() {
       )
     }
   }, [])
+
+  // In-app /?slide=… after first paint (e.g. Inicio/Tracks on same / session); then strip query
+  useEffect(() => {
+    if (skipQueryDeepLink.current) {
+      skipQueryDeepLink.current = false
+      return
+    }
+    const s = searchParams.get("slide")
+    if (s === "hero") {
+      goToSlide(HERO_SLIDE_INDEX)
+      router.replace("/", { scroll: false })
+    } else if (s === "tracks") {
+      goToSlide(TRACK_SELECTOR_SLIDE)
+      router.replace("/", { scroll: false })
+    }
+  }, [searchParams, goToSlide, router])
 
   return (
     <div
@@ -237,5 +261,13 @@ export default function Home() {
         <span>para navegar</span>
       </div>
     </div>
+  )
+}
+
+export default function HomePage() {
+  return (
+    <Suspense fallback={<div className="fixed inset-0 bg-background" />}>
+      <HomeDeck />
+    </Suspense>
   )
 }
