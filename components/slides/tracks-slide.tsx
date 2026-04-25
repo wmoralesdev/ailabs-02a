@@ -71,7 +71,7 @@ export function TracksSlide({ isActive }: SlideProps) {
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-6 sm:mb-8">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-6 sm:mb-8">
           Elige tu camino
         </h2>
 
@@ -83,8 +83,8 @@ export function TracksSlide({ isActive }: SlideProps) {
               onClick={() => setActiveTrack(index)}
               className={`px-3 sm:px-4 py-2 font-mono text-xs transition-all ${
                 activeTrack === index
-                  ? "bg-white text-black"
-                  : "bg-neutral-900 text-neutral-500 hover:bg-neutral-800 hover:text-white"
+                  ? "bg-foreground text-background"
+                  : "bg-neutral-900 text-neutral-500 hover:bg-neutral-800 hover:text-foreground dark:hover:text-foreground"
               }`}
             >
               Track {track.id}
@@ -96,7 +96,7 @@ export function TracksSlide({ isActive }: SlideProps) {
         <div className="slide-animate border border-neutral-800 bg-neutral-900/30 p-5 sm:p-8 md:p-10">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4 sm:mb-6">
             <div>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-light text-white mb-1">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-light text-foreground mb-1">
                 {tracks[activeTrack].hasPixelTitle ? (
                   <>ChatSDK <span className={`${GeistPixelSquare.className} font-medium`}>Agents</span></>
                 ) : (

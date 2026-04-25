@@ -43,15 +43,15 @@ export function HeroSlide({ isActive }: SlideProps) {
           <h1 className="slide-animate text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-medium tracking-tight text-neutral-500 leading-none">
             Zero to
           </h1>
-          <h1 className="slide-animate text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-medium tracking-tight text-white leading-none flex items-baseline gap-2 sm:gap-4">
+          <h1 className="slide-animate text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-medium tracking-tight text-foreground leading-none flex items-baseline gap-2 sm:gap-4">
             <span className={`${GeistPixelSquare.className} font-medium`}>Agent</span>
-            <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full animate-pulse" />
+            <span className="inline-block w-2 h-2 sm:w-3 sm:h-3 bg-foreground rounded-full animate-pulse" />
           </h1>
         </div>
 
         {/* Meta info */}
         <div className="slide-animate flex flex-wrap items-center gap-4 sm:gap-8 mb-8 sm:mb-12 font-mono text-xs sm:text-sm md:text-base">
-          <span className="text-white">04.25.26</span>
+          <span className="text-foreground">04.25.26</span>
           <span className="text-neutral-600 hidden sm:inline">|</span>
           <span className="text-neutral-500 tracking-wider">San Salvador / SLV</span>
         </div>
@@ -64,13 +64,13 @@ export function HeroSlide({ isActive }: SlideProps) {
         {/* Hosts */}
         <div className="slide-animate flex flex-wrap items-center gap-2 sm:gap-3 text-sm">
           <span className="text-neutral-600">Presentado por</span>
-          <span className="text-white font-medium">v0 by Vercel</span>
+          <span className="text-foreground font-medium">v0 by Vercel</span>
           <span className="text-neutral-700">+</span>
           <a 
             href="https://ailabs.sv" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-white font-medium hover:text-neutral-300 transition-colors"
+            className="text-foreground font-medium hover:opacity-70 transition-opacity"
           >
             Ai /abs
           </a>
@@ -80,7 +80,7 @@ export function HeroSlide({ isActive }: SlideProps) {
       {/* Large triangle decoration */}
       <div className="slide-animate absolute bottom-20 sm:bottom-16 right-6 sm:right-16 md:right-24 lg:right-32">
         <svg
-          className="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 text-white opacity-90"
+          className="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 text-foreground opacity-90"
           viewBox="0 0 76 65"
           fill="currentColor"
         >

@@ -25,7 +25,7 @@ export function CreditsSlide({ isActive }: SlideProps) {
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           $30 USD
         </h2>
 
@@ -39,9 +39,9 @@ export function CreditsSlide({ isActive }: SlideProps) {
 
         {/* Gift box visual */}
         <div className="slide-animate inline-flex flex-col items-center p-6 sm:p-10 border border-neutral-800 bg-neutral-950/50">
-          <div className="w-12 h-12 sm:w-16 sm:h-16 border-2 border-white/50 flex items-center justify-center mb-4 sm:mb-6">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 border-2 border-foreground/50 flex items-center justify-center mb-4 sm:mb-6">
             <svg
-              className="w-6 h-6 sm:w-8 sm:h-8 text-white/70"
+              className="w-6 h-6 sm:w-8 sm:h-8 text-foreground/70"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

@@ -207,7 +207,7 @@ export function Track3TitleSlide({ isActive }: SlideProps) {
           </span>
         </div>
 
-        <h1 className="slide-animate text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white leading-none mb-4">
+        <h1 className="slide-animate text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-foreground leading-none mb-4">
           ChatSDK
         </h1>
         <h2 className={`slide-animate ${GeistPixelSquare.className} text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-neutral-500 leading-none mb-8 sm:mb-10`}>
@@ -234,7 +234,7 @@ export function Track3ProblemSlide({ isActive }: SlideProps) {
       <div className="max-w-4xl mx-auto w-full">
         <SectionLabel>01 / El problema</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Los bots se fragmentan por plataforma
         </h2>
 
@@ -253,7 +253,7 @@ export function Track3ProblemSlide({ isActive }: SlideProps) {
 
         <div className="slide-animate mt-10 sm:mt-14 p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
           <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Accion</p>
-          <p className="text-white text-sm sm:text-base">
+          <p className="text-foreground text-sm sm:text-base">
             Elige una conversacion repetida y pruebala primero en un simulador.
           </p>
         </div>
@@ -268,7 +268,7 @@ export function Track3PlainLanguageSlide({ isActive }: SlideProps) {
       <div className="max-w-4xl mx-auto w-full">
         <SectionLabel>02 / Modelo mental</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           ChatSDK es una capa comun para agentes de chat
         </h2>
 
@@ -297,7 +297,7 @@ export function Track3FlowSlide({ isActive }: SlideProps) {
       <div className="max-w-5xl mx-auto w-full">
         <SectionLabel>03 / Como fluye</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           El agente empieza con un evento
         </h2>
 
@@ -311,7 +311,7 @@ export function Track3FlowSlide({ isActive }: SlideProps) {
             <span className="text-neutral-600">→</span>
             <span className="px-3 py-1.5 bg-neutral-800 text-neutral-300">Adapter</span>
             <span className="text-neutral-600">→</span>
-            <span className="px-3 py-1.5 bg-white text-black">Handler</span>
+            <span className="px-3 py-1.5 bg-foreground text-background">Handler</span>
             <span className="text-neutral-600">→</span>
             <span className="px-3 py-1.5 bg-neutral-800 text-neutral-300">AI SDK</span>
             <span className="text-neutral-600">→</span>
@@ -323,7 +323,7 @@ export function Track3FlowSlide({ isActive }: SlideProps) {
 
         <div className="slide-animate p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
           <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Frase para explicar</p>
-          <p className="text-white text-sm sm:text-base">
+          <p className="text-foreground text-sm sm:text-base">
             &quot;Lo importante no es el chat. Lo importante es que cualquier plataforma dispara la misma logica del agente.&quot;
           </p>
         </div>
@@ -338,7 +338,7 @@ export function Track3StackSlide({ isActive }: SlideProps) {
       <div className="max-w-6xl mx-auto w-full">
         <SectionLabel>04 / Stack</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Que hace cada pieza
         </h2>
 
@@ -351,13 +351,13 @@ export function Track3StackSlide({ isActive }: SlideProps) {
             <div
               key={card.title}
               className={`p-5 sm:p-6 border ${
-                index === 0 ? "border-white bg-white/5" : "border-neutral-800 bg-neutral-950/50"
+                index === 0 ? "border-foreground bg-foreground/5" : "border-neutral-800 bg-neutral-950/50"
               }`}
             >
               <div className="font-mono text-neutral-600 text-xs mb-3">
                 {String(index + 1).padStart(2, "0")}
               </div>
-              <h3 className="text-white font-medium text-lg sm:text-xl mb-3">{card.title}</h3>
+              <h3 className="text-foreground font-medium text-lg sm:text-xl mb-3">{card.title}</h3>
               <p className="text-neutral-400 text-sm sm:text-base leading-relaxed">{card.text}</p>
             </div>
           ))}
@@ -373,7 +373,7 @@ export function Track3QuickStartSlide({ isActive }: SlideProps) {
       <div className="max-w-6xl mx-auto w-full">
         <SectionLabel>05 / Camino recomendado</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Empieza por el nivel que puedas demoear
         </h2>
 
@@ -386,18 +386,18 @@ export function Track3QuickStartSlide({ isActive }: SlideProps) {
             <div
               key={path.title}
               className={`p-4 sm:p-5 border ${
-                index === 0 ? "border-white bg-white/5" : "border-neutral-800 bg-neutral-950/50"
+                index === 0 ? "border-foreground bg-foreground/5" : "border-neutral-800 bg-neutral-950/50"
               }`}
             >
               <p className="font-mono text-neutral-600 text-xs mb-3">{path.title}</p>
-              <h3 className="text-white font-medium text-lg mb-2">{path.label}</h3>
+              <h3 className="text-foreground font-medium text-lg mb-2">{path.label}</h3>
               <p className="text-neutral-500 text-sm leading-relaxed">{path.detail}</p>
             </div>
           ))}
         </div>
 
         <div className="slide-animate p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
-          <p className="text-white text-sm sm:text-base">
+          <p className="text-foreground text-sm sm:text-base">
             Recomendacion para el evento: entrega Nivel 1 muy claro. Si sobra tiempo, conecta un adapter real.
           </p>
         </div>
@@ -412,7 +412,7 @@ export function Track3UseCasesSlide({ isActive }: SlideProps) {
       <div className="max-w-4xl mx-auto w-full">
         <SectionLabel>06 / Buenos casos</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Cuando vale la pena usar ChatSDK
         </h2>
 
@@ -441,7 +441,7 @@ export function Track3RecipesSlide({ isActive }: SlideProps) {
       <div className="max-w-6xl mx-auto w-full">
         <SectionLabel>07 / Recetas seguras</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Si estas empezando, elige una receta
         </h2>
 
@@ -454,13 +454,13 @@ export function Track3RecipesSlide({ isActive }: SlideProps) {
             <div
               key={recipe.title}
               className={`p-5 sm:p-6 border ${
-                index === 0 ? "border-white bg-white/5" : "border-neutral-800 bg-neutral-950/50"
+                index === 0 ? "border-foreground bg-foreground/5" : "border-neutral-800 bg-neutral-950/50"
               }`}
             >
               <div className="font-mono text-neutral-600 text-xs mb-3">
                 {String(index + 1).padStart(2, "0")}
               </div>
-              <h3 className="text-white font-medium text-lg sm:text-xl mb-4">{recipe.title}</h3>
+              <h3 className="text-foreground font-medium text-lg sm:text-xl mb-4">{recipe.title}</h3>
               <div className="space-y-2 text-xs sm:text-sm">
                 <p><span className="text-neutral-500">Plataformas:</span> <span className="text-neutral-300">{recipe.platform}</span></p>
                 <p><span className="text-neutral-500">Trigger:</span> <span className="text-neutral-300">{recipe.trigger}</span></p>
@@ -480,7 +480,7 @@ export function Track3BuildFirstSlide({ isActive }: SlideProps) {
       <div className="max-w-4xl mx-auto w-full">
         <SectionLabel>08 / Primer build</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Construye primero la historia visible
         </h2>
 
@@ -501,7 +501,7 @@ export function Track3BuildFirstSlide({ isActive }: SlideProps) {
 
         <div className="slide-animate mt-8 sm:mt-10 p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
           <p className="text-neutral-500 text-xs uppercase tracking-wider mb-2">Regla</p>
-        <p className="text-white text-sm sm:text-base">
+        <p className="text-foreground text-sm sm:text-base">
             Si no se puede explicar con datos mock, conectarlo a una plataforma real no lo arregla.
           </p>
         </div>
@@ -516,7 +516,7 @@ export function Track3StarterPromptSlide({ isActive }: SlideProps) {
       <div className="max-w-5xl mx-auto w-full">
         <SectionLabel>09 / Prompt inicial</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Copia esto para empezar ya
         </h2>
 
@@ -538,7 +538,7 @@ export function Track3MockFirstSlide({ isActive }: SlideProps) {
       <div className="max-w-5xl mx-auto w-full">
         <SectionLabel>10 / Mock primero</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Que simular antes de integrar
         </h2>
 
@@ -555,7 +555,7 @@ export function Track3MockFirstSlide({ isActive }: SlideProps) {
               <p className="text-neutral-500 text-xs uppercase tracking-wider mb-1">Real despues</p>
               <p className="text-neutral-300 text-sm mb-3">{item.real}</p>
               <p className="text-neutral-500 text-xs uppercase tracking-wider mb-1">Mock ahora</p>
-              <p className="text-white text-sm">{item.mock}</p>
+              <p className="text-foreground text-sm">{item.mock}</p>
             </div>
           ))}
         </div>
@@ -570,7 +570,7 @@ export function Track3MvdChecklistSlide({ isActive }: SlideProps) {
       <div className="max-w-4xl mx-auto w-full">
         <SectionLabel>11 / Demo minima</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Minimum viable demo
         </h2>
 
@@ -599,12 +599,12 @@ export function Track3DemoScriptSlide({ isActive }: SlideProps) {
       <div className="max-w-4xl mx-auto w-full">
         <SectionLabel>12 / Como presentarlo</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Tu demo debe sonar simple
         </h2>
 
-        <div className="slide-animate p-5 sm:p-7 border border-white bg-white/5 mb-6 sm:mb-8">
-          <p className="text-white text-lg sm:text-xl leading-relaxed">
+        <div className="slide-animate p-5 sm:p-7 border border-foreground bg-foreground/5 mb-6 sm:mb-8">
+          <p className="text-foreground text-lg sm:text-xl leading-relaxed">
             &quot;Una pregunta entra desde un canal simulado. ChatSDK la modela como evento comun. El handler usa IA, guarda estado y responde con una tarjeta. Luego repito el flujo desde otro canal sin cambiar la logica.&quot;
           </p>
         </div>
@@ -623,7 +623,7 @@ export function Track3MistakesSlide({ isActive }: SlideProps) {
       <div className="max-w-5xl mx-auto w-full">
         <SectionLabel>13 / Errores comunes</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-3 sm:mb-4">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-3 sm:mb-4">
           Problemas que puedes evitar
         </h2>
 
@@ -641,7 +641,7 @@ export function Track3MistakesSlide({ isActive }: SlideProps) {
                 <span className="text-neutral-400 text-xs sm:text-sm leading-relaxed">{item.mistake}</span>
               </div>
               <div className="pl-9">
-                <span className="text-white text-xs sm:text-sm leading-relaxed">{item.fix}</span>
+                <span className="text-foreground text-xs sm:text-sm leading-relaxed">{item.fix}</span>
               </div>
             </div>
           ))}
@@ -657,7 +657,7 @@ export function Track3StuckSlide({ isActive }: SlideProps) {
       <div className="max-w-4xl mx-auto w-full">
         <SectionLabel>14 / Si te bloqueas</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Recupera reduciendo superficie
         </h2>
 
@@ -686,14 +686,14 @@ export function Track3PromptingSlide({ isActive }: SlideProps) {
       <div className="max-w-4xl mx-auto w-full">
         <SectionLabel>15 / Como pedir ayuda</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Divide el pedido por responsabilidades
         </h2>
 
         <div className="slide-animate grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mb-6 sm:mb-8">
-          <div className="p-5 sm:p-6 border border-white bg-white/5">
+          <div className="p-5 sm:p-6 border border-foreground bg-foreground/5">
             <p className="text-neutral-500 text-xs uppercase tracking-wider mb-3">Para v0</p>
-            <p className="text-white text-sm sm:text-base leading-relaxed">
+            <p className="text-foreground text-sm sm:text-base leading-relaxed">
               &quot;Haz un simulador visual de canales con timeline de eventos, streaming y panel de estado.&quot;
             </p>
           </div>
@@ -706,7 +706,7 @@ export function Track3PromptingSlide({ isActive }: SlideProps) {
         </div>
 
         <div className="slide-animate p-4 sm:p-6 border border-neutral-800 bg-neutral-900/50">
-          <p className="text-white text-sm sm:text-base">
+          <p className="text-foreground text-sm sm:text-base">
             Pide UI y comportamiento por separado. Asi puedes avanzar aunque una integracion todavia no este lista.
           </p>
         </div>
@@ -729,7 +729,7 @@ export function Track3ResourcesSlide({ isActive }: SlideProps) {
       <div className="max-w-4xl mx-auto w-full">
         <SectionLabel>16 / Recursos</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Donde mirar cuando avances
         </h2>
 
@@ -756,7 +756,7 @@ export function Track3ArchitectureRecapSlide({ isActive }: SlideProps) {
       <div className="max-w-5xl mx-auto w-full">
         <SectionLabel>17 / Recap tecnico</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           La arquitectura que debes recordar
         </h2>
 
@@ -764,7 +764,7 @@ export function Track3ArchitectureRecapSlide({ isActive }: SlideProps) {
           <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm min-w-max">
             <span className="px-3 py-1.5 bg-neutral-800 text-neutral-300">Adapters</span>
             <span className="text-neutral-600">+</span>
-            <span className="px-3 py-1.5 bg-white text-black">Chat handlers</span>
+            <span className="px-3 py-1.5 bg-foreground text-background">Chat handlers</span>
             <span className="text-neutral-600">+</span>
             <span className="px-3 py-1.5 bg-neutral-800 text-neutral-300">State</span>
             <span className="text-neutral-600">+</span>
@@ -798,7 +798,7 @@ export function Track3RecapSlide({ isActive }: SlideProps) {
       <div className="max-w-4xl mx-auto w-full">
         <SectionLabel>18 / Entrega</SectionLabel>
 
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Que entregar al final
         </h2>
 
@@ -817,8 +817,8 @@ export function Track3RecapSlide({ isActive }: SlideProps) {
           ))}
         </div>
 
-        <div className="slide-animate p-4 sm:p-6 border-l-2 border-white bg-neutral-900/30">
-          <p className="text-white text-sm sm:text-base">
+        <div className="slide-animate p-4 sm:p-6 border-l-2 border-foreground bg-neutral-900/30">
+          <p className="text-foreground text-sm sm:text-base">
             Practica: &quot;Este agente recibe eventos de chat, usa IA para decidir, guarda contexto y responde en mas de una plataforma.&quot;
           </p>
         </div>

@@ -20,7 +20,7 @@ export function WelcomeVideoSlide({ isActive }: SlideProps) {
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Antes de empezar
         </h2>
 
@@ -37,9 +37,9 @@ export function WelcomeVideoSlide({ isActive }: SlideProps) {
           className="slide-animate group inline-flex flex-col items-center p-8 sm:p-12 md:p-16 border border-neutral-800 bg-neutral-900/30 hover:border-neutral-600 hover:bg-neutral-900/50 transition-all"
         >
           {/* Play icon */}
-          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 border-2 border-neutral-600 group-hover:border-white rounded-full flex items-center justify-center mb-6 sm:mb-8 transition-colors">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 border-2 border-neutral-600 group-hover:border-foreground rounded-full flex items-center justify-center mb-6 sm:mb-8 transition-colors">
             <svg
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-neutral-400 group-hover:text-white transition-colors ml-1"
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-neutral-400 group-hover:text-foreground transition-colors ml-1"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -47,7 +47,7 @@ export function WelcomeVideoSlide({ isActive }: SlideProps) {
             </svg>
           </div>
 
-          <span className="text-white text-base sm:text-lg font-medium mb-2">
+          <span className="text-foreground text-base sm:text-lg font-medium mb-2">
             Ver video de bienvenida
           </span>
           <span className="text-neutral-500 text-xs sm:text-sm flex items-center gap-2">

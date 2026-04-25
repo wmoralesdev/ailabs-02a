@@ -25,7 +25,7 @@ export function FormatSlide({ isActive }: SlideProps) {
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight text-white mb-4 sm:mb-6">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight text-foreground mb-4 sm:mb-6">
           Hoy sales con algo deployado
         </h2>
 
@@ -40,14 +40,14 @@ export function FormatSlide({ isActive }: SlideProps) {
               key={item.title}
               className={`slide-animate p-5 sm:p-6 border ${
                 index === 2
-                  ? "border-white/30 bg-white/5"
+                  ? "border-foreground/30 bg-foreground/5"
                   : "border-neutral-800 bg-neutral-950/50"
               }`}
             >
               <div className={`font-mono text-xs mb-3 sm:mb-4 ${index === 2 ? "text-neutral-300" : "text-neutral-600"}`}>
                 {item.time}
               </div>
-              <h3 className="text-lg sm:text-xl font-medium text-white mb-2 sm:mb-3">{item.title}</h3>
+              <h3 className="text-lg sm:text-xl font-medium text-foreground mb-2 sm:mb-3">{item.title}</h3>
               <p className="text-neutral-500 leading-relaxed text-sm">
                 {item.desc}
               </p>
@@ -57,7 +57,7 @@ export function FormatSlide({ isActive }: SlideProps) {
 
         {/* What is v0 */}
         <div className="slide-animate mt-8 sm:mt-12 p-4 sm:p-6 border-l-2 border-neutral-800 bg-neutral-950/30">
-          <h4 className="text-white font-medium mb-2 text-sm">
+          <h4 className="text-foreground font-medium mb-2 text-sm">
             ¿Qué es v0?
           </h4>
           <p className="text-neutral-500 text-sm leading-relaxed">

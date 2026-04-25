@@ -45,7 +45,7 @@ export function PrizesSlide({ isActive }: SlideProps) {
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-6 sm:mb-10">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-6 sm:mb-10">
           $6,000+ en premios
         </h2>
 
@@ -56,18 +56,18 @@ export function PrizesSlide({ isActive }: SlideProps) {
               key={index}
               className={`slide-animate p-5 sm:p-6 border ${
                 prize.highlight
-                  ? "border-white bg-white/5"
+                  ? "border-foreground bg-foreground/5"
                   : "border-neutral-800 bg-neutral-950/50"
               }`}
             >
               <div
                 className={`text-xs font-mono mb-3 sm:mb-4 ${
-                  prize.highlight ? "text-white" : "text-neutral-600"
+                  prize.highlight ? "text-foreground" : "text-neutral-600"
                 }`}
               >
                 {prize.place}
               </div>
-              <div className="text-3xl sm:text-4xl font-medium text-white mb-2 sm:mb-3">
+              <div className="text-3xl sm:text-4xl font-medium text-foreground mb-2 sm:mb-3">
                 {prize.amount}
               </div>
               <div className="text-xs text-neutral-500">
@@ -92,7 +92,7 @@ export function PrizesSlide({ isActive }: SlideProps) {
                   {index + 1}
                 </span>
                 <div>
-                  <span className="text-white text-xs sm:text-sm">{item.title}</span>
+                  <span className="text-foreground text-xs sm:text-sm">{item.title}</span>
                   <span className="text-neutral-600 text-xs sm:text-sm"> - {item.desc}</span>
                 </div>
               </div>

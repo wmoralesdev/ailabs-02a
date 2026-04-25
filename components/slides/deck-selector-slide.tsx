@@ -53,7 +53,7 @@ export function DeckSelectorSlide({ isActive }: SlideProps) {
         </div>
 
         {/* Title */}
-        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-6 text-center">
+        <h2 className="slide-animate text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-foreground mb-4 sm:mb-6 text-center">
           Elige tu track
         </h2>
 
@@ -68,14 +68,14 @@ export function DeckSelectorSlide({ isActive }: SlideProps) {
               {deck.available ? (
                 <Link
                   href={deck.href}
-                  className="block p-6 sm:p-8 border border-neutral-800 hover:border-white transition-all group"
+                  className="block p-6 sm:p-8 border border-neutral-800 hover:border-foreground transition-all group"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <span className="text-neutral-600 font-mono text-xs tracking-wider">
                       {deck.number}
                     </span>
                     <svg 
-                      className="w-4 h-4 text-neutral-600 group-hover:text-white transition-colors" 
+                      className="w-4 h-4 text-neutral-600 group-hover:text-foreground transition-colors" 
                       fill="none" 
                       stroke="currentColor" 
                       viewBox="0 0 24 24"
@@ -83,10 +83,10 @@ export function DeckSelectorSlide({ isActive }: SlideProps) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-medium text-white mb-1 group-hover:text-white transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-medium text-foreground mb-1">
                     {deck.title}
                   </h3>
-                  <p className={`${GeistPixelSquare.className} text-lg sm:text-xl text-neutral-400 group-hover:text-white transition-colors mb-3`}>
+                  <p className={`${GeistPixelSquare.className} text-lg sm:text-xl text-neutral-400 group-hover:text-foreground transition-colors mb-3`}>
                     {deck.subtitle}
                   </p>
                   <p className="text-neutral-500 text-sm leading-relaxed">
