@@ -75,6 +75,15 @@ export function HeroSlide({ isActive }: SlideProps) {
           >
             Ai /abs
           </a>
+          <span className="text-muted-foreground">+</span>
+          <a
+            href="https://www.the502project.com/en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground font-medium hover:text-foreground/85 transition-colors"
+          >
+            The 502 Project
+          </a>
         </div>
       </div>
 
