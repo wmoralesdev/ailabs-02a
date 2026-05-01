@@ -10,16 +10,16 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Zero to Agent | Ciudad de Guatemala',
-  description: 'Un evento de v0 by Vercel con Ai /abs como host fundador para Guatemala. Workshop + Hackathon Global. 2 de Mayo, 2026.',
+  description: 'Un evento de v0 by Vercel con Ai /abs y The 502 Project como founding hosts. Workshop + Hackathon Global. 2 de Mayo, 2026.',
   generator: 'v0.app',
   openGraph: {
     title: 'Zero to Agent | Ciudad de Guatemala',
-    description: 'Un evento de v0 by Vercel con Ai /abs como host fundador para Guatemala.',
+    description: 'Un evento de v0 by Vercel con Ai /abs y The 502 Project como founding hosts.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Zero to Agent | Ciudad de Guatemala',
-    description: 'Un evento de v0 by Vercel con Ai /abs como host fundador para Guatemala.',
+    description: 'Un evento de v0 by Vercel con Ai /abs y The 502 Project como founding hosts.',
   },
   icons: {
     icon: [

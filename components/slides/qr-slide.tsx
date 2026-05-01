@@ -15,7 +15,7 @@ export function QRSlide({ isActive }: SlideProps) {
   useEffect(() => {
     if (!canvasRef.current) return
     const isDark = resolvedTheme === "dark" || resolvedTheme === undefined
-    QRCode.toCanvas(canvasRef.current, "https://02a.ailabs.sv", {
+    QRCode.toCanvas(canvasRef.current, "https://02a.ailabs.gt", {
       width: 280,
       margin: 0,
       color: isDark
@@ -36,7 +36,7 @@ export function QRSlide({ isActive }: SlideProps) {
         </div>
 
         <p className="mt-6 sm:mt-8 font-mono text-sm sm:text-base text-muted-foreground">
-          02a.ailabs.sv
+          02a.ailabs.gt
         </p>
       </div>
     </section>
