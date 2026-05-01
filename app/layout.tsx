@@ -9,19 +9,17 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Zero to Agent | San Salvador',
-  description: 'Un evento de v0 by Vercel con Ai /abs como host fundador para El Salvador. Workshop + Hackathon Global. 25 de Abril, 2026.',
+  title: 'Zero to Agent | Ciudad de Guatemala',
+  description: 'Un evento de v0 by Vercel con Ai /abs como host fundador para Guatemala. Workshop + Hackathon Global. 2 de Mayo, 2026.',
   generator: 'v0.app',
   openGraph: {
-    title: 'Zero to Agent | San Salvador',
-    description: 'Un evento de v0 by Vercel con Ai /abs como host fundador para El Salvador.',
-    images: ['https://hebbkx1anhila5yf.public.blob.vercel-storage.com/social-card-san%20salvador%20%282%29-8WLJnQTfLM8qpGSnIiSxBexG7URPiO.png'],
+    title: 'Zero to Agent | Ciudad de Guatemala',
+    description: 'Un evento de v0 by Vercel con Ai /abs como host fundador para Guatemala.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zero to Agent | San Salvador',
-    description: 'Un evento de v0 by Vercel con Ai /abs como host fundador para El Salvador.',
-    images: ['https://hebbkx1anhila5yf.public.blob.vercel-storage.com/social-card-san%20salvador%20%282%29-8WLJnQTfLM8qpGSnIiSxBexG7URPiO.png'],
+    title: 'Zero to Agent | Ciudad de Guatemala',
+    description: 'Un evento de v0 by Vercel con Ai /abs como host fundador para Guatemala.',
   },
   icons: {
     icon: [

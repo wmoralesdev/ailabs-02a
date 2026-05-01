@@ -20,7 +20,7 @@ export function TrackChromeActions() {
         Tracks
       </Link>
       <a
-        href="https://ailabs.sv/links"
+        href="https://ailabs.gt/links"
         target="_blank"
         rel="noreferrer"
         className="border border-border bg-background/80 px-3 py-2 text-muted-foreground backdrop-blur transition-colors hover:border-foreground hover:text-foreground"
