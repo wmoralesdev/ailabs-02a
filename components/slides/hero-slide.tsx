@@ -68,7 +68,7 @@ export function HeroSlide({ isActive }: SlideProps) {
           <span className="text-foreground font-medium">v0 by Vercel</span>
           <span className="text-muted-foreground">+</span>
           <a 
-            href="https://ailabs.gt" 
+            href="https://ailabs.sv" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-foreground font-medium hover:text-foreground/85 transition-colors"

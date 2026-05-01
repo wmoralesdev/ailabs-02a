@@ -7,9 +7,8 @@ interface SlideProps {
 export function SocialSlide({ isActive }: SlideProps) {
   return (
     <section
-      className={`absolute inset-0 flex flex-col justify-center px-6 sm:px-8 md:px-16 lg:px-24 overflow-y-auto py-16 sm:py-0 ${
-        isActive ? "pointer-events-auto" : "pointer-events-none"
-      }`}
+      className={`absolute inset-0 flex flex-col justify-center px-6 sm:px-8 md:px-16 lg:px-24 overflow-y-auto py-16 sm:py-0 ${isActive ? "pointer-events-auto" : "pointer-events-none"
+        }`}
     >
       <div className="max-w-3xl mx-auto w-full text-center">
         {/* Section label */}
@@ -56,12 +55,12 @@ export function SocialSlide({ isActive }: SlideProps) {
               @vercel
             </a>
             <a
-              href="https://twitter.com/ailabs_gt"
+              href="https://twitter.com/ailabs_sv"
               target="_blank"
               rel="noopener noreferrer"
               className="px-3 sm:px-4 py-2 bg-secondary text-muted-foreground hover:bg-muted hover:text-foreground transition-colors text-xs sm:text-sm"
             >
-              @ailabs_gt
+              @ailabs_sv
             </a>
             <a
               href="https://twitter.com/the502project"
@@ -77,7 +76,7 @@ export function SocialSlide({ isActive }: SlideProps) {
         {/* Social buttons */}
         <div className="slide-animate flex justify-center gap-3 sm:gap-4 mb-12 sm:mb-16">
           <a
-            href="https://twitter.com/intent/tweet?text=Construyendo%20agentes%20de%20IA%20en%20%23ZerotoAgent%20con%20%40v0%20%40vercel%20%40ailabs_gt%20%40the502project&url=https://community.vercel.com/hackathons/zero-to-agent"
+            href="https://twitter.com/intent/tweet?text=Construyendo%20agentes%20de%20IA%20en%20%23ZerotoAgent%20con%20%40v0%20%40vercel%20%40ailabs_sv%20%40the502project&url=https://community.vercel.com/hackathons/zero-to-agent"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 sm:w-12 sm:h-12 border border-border flex items-center justify-center text-muted-foreground hover:border-foreground hover:text-foreground transition-colors"
@@ -118,7 +117,7 @@ export function SocialSlide({ isActive }: SlideProps) {
             <div className="flex items-center gap-2">
               <span className="text-muted-foreground">Founding host:</span>
               <a
-                href="https://ailabs.gt"
+                href="https://ailabs.sv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-foreground/85 transition-colors"
