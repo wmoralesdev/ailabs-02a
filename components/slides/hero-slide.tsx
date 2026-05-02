@@ -36,6 +36,7 @@ export function HeroSlide({ isActive }: SlideProps) {
           <span className="text-muted-foreground font-mono text-xs tracking-[0.2em] uppercase">
             02A / Global Build Week / Apr 24-May 3
           </span>
+
         </div>
 
         {/* Main title */}
@@ -51,14 +52,14 @@ export function HeroSlide({ isActive }: SlideProps) {
 
         {/* Meta info */}
         <div className="slide-animate flex flex-wrap items-center gap-4 sm:gap-8 mb-8 sm:mb-12 font-mono text-xs sm:text-sm md:text-base">
-          <span className="text-foreground">04.25.26</span>
+          <span className="text-foreground">05.02.26</span>
           <span className="text-muted-foreground hidden sm:inline">|</span>
-          <span className="text-muted-foreground tracking-wider">San Salvador / SLV</span>
+          <span className="text-muted-foreground tracking-wider">Guatemala City / GTM</span>
         </div>
 
         {/* Description */}
         <p className="slide-animate text-base sm:text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-6 sm:mb-10">
-          Construye y despliega un agente real con v0 y Vercel. Hoy empezamos en San Salvador; la competencia global sigue hasta el 3 de mayo.
+          Construye y despliega un agente real con v0 y Vercel. Hoy empezamos en Ciudad de Guatemala; la competencia global sigue hasta el 3 de mayo.
         </p>
 
         {/* Hosts */}
@@ -73,6 +74,15 @@ export function HeroSlide({ isActive }: SlideProps) {
             className="text-foreground font-medium hover:text-foreground/85 transition-colors"
           >
             Ai /abs
+          </a>
+          <span className="text-muted-foreground">+</span>
+          <a
+            href="https://www.the502project.com/en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground font-medium hover:text-foreground/85 transition-colors"
+          >
+            The 502 Project
           </a>
         </div>
       </div>

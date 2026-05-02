@@ -12,8 +12,8 @@ const timeline = [
     current: false,
   },
   {
-    date: "25 abril",
-    title: "San Salvador",
+    date: "2 mayo",
+    title: "Ciudad de Guatemala",
     hasPixelTitle: true,
     description: "Workshop + build time",
     current: true,
@@ -82,7 +82,7 @@ export function DatesSlide({ isActive }: SlideProps) {
                 }`}
               >
                 {item.hasPixelTitle ? (
-                  <>Zero to <span className={`${GeistPixelSquare.className} font-medium`}>Agent</span> SV</>
+                  <>Zero to <span className={`${GeistPixelSquare.className} font-medium`}>Agent</span> GT</>
                 ) : (
                   item.title
                 )}
