@@ -8,7 +8,7 @@ interface SlideProps {
   isActive: boolean
 }
 
-const creditsUrl = "https://v0.link/PB3HQk7"
+const creditsUrl = "https://v0.link/7P6EJk3"
 const QR_SIZE = 200
 
 export function CreditsSlide({ isActive }: SlideProps) {
@@ -29,9 +29,8 @@ export function CreditsSlide({ isActive }: SlideProps) {
 
   return (
     <section
-      className={`absolute inset-0 flex flex-col justify-center px-6 sm:px-8 md:px-16 lg:px-24 ${
-        isActive ? "pointer-events-auto" : "pointer-events-none"
-      }`}
+      className={`absolute inset-0 flex flex-col justify-center px-6 sm:px-8 md:px-16 lg:px-24 ${isActive ? "pointer-events-auto" : "pointer-events-none"
+        }`}
     >
       {/* Background triangle */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none">
